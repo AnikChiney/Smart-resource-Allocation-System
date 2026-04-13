@@ -1,0 +1,125 @@
+body {
+  background: #0f171e;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.volunteer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.volunteer-header h1 {
+  font-size: 2rem;
+}
+
+.volunteer-header p {
+  color: #94a3b8;
+}
+
+/* Stats */
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  background: #1a242f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  color: #00a8e1;
+}
+
+/* Filters */
+.action-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.prime-input,
+.prime-select {
+  padding: 8px;
+  background: #232f3e;
+  border: 1px solid #37475a;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Grid */
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.volunteer-card {
+  background: #1a242f;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #37475a;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-container {
+  margin: 10px 0;
+}
+
+.skill-tag {
+  background: rgba(0, 168, 225, 0.2);
+  padding: 4px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #00a8e1;
+  color: white;
+}
+
+.btn-secondary {
+  background: #232f3e;
+  color: white;
+}
+
+/* Status */
+.badge-active {
+  color: #00a86b;
+}
+
+.badge-busy {
+  color: orange;
+}
+
+.badge-inactive {
+  color: gray;
+}
+
+/* Empty */
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+}

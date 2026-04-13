@@ -1,0 +1,225 @@
+:root {
+    --prime-bg: #0f171e;
+    --prime-surface: #1a242f;
+    --prime-surface-elevated: #232f3e;
+    --prime-surface-hover: #2a3a4a;
+    --prime-border: #37475a;
+
+    --prime-blue: #00a8e1;
+    --prime-blue-hover: #00b4f0;
+
+    --prime-success: #00a86b;
+    --prime-warning: #ffa724;
+    --prime-error: #ff6b6b;
+
+    --prime-text-primary: #ffffff;
+    --prime-text-secondary: #94a3b8;
+    --prime-text-muted: #64748b;
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+    --shadow-md: 0 6px 20px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 20px rgba(0,168,225,0.25);
+
+    --transition: all 0.25s ease;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--prime-bg);
+    color: var(--prime-text-primary);
+}
+
+/* NAVBAR */
+.main-nav {
+    background: rgba(26, 36, 47, 0.95);
+    border-bottom: 1px solid var(--prime-border);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.nav-link {
+    color: var(--prime-text-secondary);
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background: var(--prime-surface-hover);
+    color: var(--prime-text-primary);
+}
+
+.nav-link.active {
+    color: var(--prime-blue);
+    background: rgba(0,168,225,0.1);
+}
+
+/* DASHBOARD */
+.dashboard-container {
+    padding: 2rem;
+}
+
+/* HEADER */
+.dashboard-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #fff, #94a3b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dashboard-header p {
+    color: var(--prime-text-secondary);
+}
+
+/* KPI GRID */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* KPI CARD */
+.kpi-card {
+    background: var(--prime-surface);
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--prime-border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--prime-blue);
+    opacity: 0.6;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--prime-blue);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.kpi-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* CHART PANELS */
+.chart-panel {
+    background: var(--prime-surface);
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--prime-border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.chart-panel:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.chart-panel h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.chart-container {
+    height: 300px;
+}
+
+/* HEATMAP */
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.location-cell {
+    padding: 1.2rem;
+    border-radius: 12px;
+    text-align: center;
+    background: var(--prime-surface-elevated);
+    border: 1px solid var(--prime-border);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.location-cell:hover {
+    transform: translateY(-4px);
+    border-color: var(--prime-blue);
+    box-shadow: var(--shadow-md);
+}
+
+.location-cell strong {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* BUTTON */
+.btn {
+    padding: 8px 16px;
+    background: var(--prime-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--prime-blue-hover);
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-container {
+        padding: 1rem;
+    }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--prime-border);
+    border-radius: 4px;
+}

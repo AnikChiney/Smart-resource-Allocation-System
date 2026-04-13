@@ -1,0 +1,148 @@
+.priority-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.priority-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* DISTRIBUTION */
+.distribution-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dist-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dist-card.critical {
+  border-top: 4px solid red;
+}
+.dist-card.high {
+  border-top: 4px solid orange;
+}
+.dist-card.medium {
+  border-top: 4px solid gold;
+}
+.dist-card.low {
+  border-top: 4px solid green;
+}
+.dist-card.deferred {
+  border-top: 4px solid gray;
+}
+
+.dist-count {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* FILTER */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 8px;
+}
+
+/* LIST */
+.priority-list {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.priority-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 100px 120px 120px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.priority-item:hover {
+  background: #f9fafb;
+}
+
+.rank-number {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* BADGES */
+.priority-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.badge-critical {
+  background: #fee2e2;
+}
+.badge-high {
+  background: #ffedd5;
+}
+.badge-medium {
+  background: #fef3c7;
+}
+.badge-low {
+  background: #d1fae5;
+}
+.badge-deferred {
+  background: #eee;
+}
+
+/* SCORE BAR */
+.score-bar {
+  height: 6px;
+  background: #ddd;
+  margin-top: 5px;
+}
+
+.score-fill {
+  height: 100%;
+}
+
+.fill-critical {
+  background: red;
+}
+.fill-high {
+  background: orange;
+}
+.fill-medium {
+  background: gold;
+}
+.fill-low {
+  background: green;
+}
+.fill-deferred {
+  background: gray;
+}
+
+/* BUTTON */
+.assign-btn {
+  padding: 6px 10px;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.empty {
+  padding: 30px;
+  text-align: center;
+}

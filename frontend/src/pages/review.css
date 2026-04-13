@@ -1,0 +1,124 @@
+:root {
+  --prime-bg: #0f171e;
+  --prime-surface: #1a242f;
+  --prime-border: #37475a;
+  --prime-blue: #00a8e1;
+  --prime-success: #00a86b;
+  --prime-warning: #ffa724;
+  --prime-error: #ff6b6b;
+  --prime-text-primary: #ffffff;
+  --prime-text-secondary: #94a3b8;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--prime-bg);
+  color: var(--prime-text-primary);
+}
+
+/* Layout */
+.review-container {
+  padding: 2rem;
+}
+
+/* Header */
+.page-header h1 {
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: var(--prime-text-secondary);
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--prime-surface);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.stat-value {
+  font-size: 2rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--prime-blue);
+  color: white;
+}
+
+/* Inputs */
+.prime-input,
+.prime-select {
+  padding: 0.5rem;
+  background: var(--prime-surface);
+  border: 1px solid var(--prime-border);
+  color: white;
+}
+
+/* Table */
+.issues-table {
+  margin-top: 1rem;
+  background: var(--prime-surface);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.8rem;
+}
+
+/* Badges */
+.quality-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+}
+
+.grade-a {
+  background: rgba(0, 168, 107, 0.2);
+}
+
+.grade-b {
+  background: rgba(0, 168, 225, 0.2);
+}
+
+.grade-c {
+  background: rgba(255, 167, 36, 0.2);
+}
+
+.grade-d {
+  background: rgba(255, 107, 107, 0.2);
+}
+
+/* Severity */
+.severity-low {
+  color: var(--prime-success);
+}
+
+.severity-medium {
+  color: var(--prime-warning);
+}
+
+.severity-high {
+  color: var(--prime-error);
+}
