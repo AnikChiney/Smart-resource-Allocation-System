@@ -20,87 +20,71 @@ body {
   color: var(--text);
 }
 
-/* NAV */
-.main-nav {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 20px;
+/* APP WRAPPER */
+.app {
+  min-height: 100vh;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-link {
-  margin: 0 10px;
-  color: var(--text-secondary);
-  cursor: pointer;
-}
-
-.nav-link.active {
-  color: var(--blue);
-}
-
-.status-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-}
-
-.status-indicator.offline {
+/* OFFLINE */
+.offline-indicator {
   background: var(--error);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.9rem;
 }
 
 /* CONTAINER */
 .container {
-  padding: 20px;
-}
-
-/* TABS */
-.nav-tabs {
-  display: flex;
-  margin: 20px 0;
-}
-
-.tab-btn {
-  flex: 1;
-  padding: 10px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
   background: var(--surface);
-  border: none;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* HEADER */
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+header p {
+  margin: 5px 0 20px;
   color: var(--text-secondary);
-  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.tab-btn.active {
-  background: var(--blue);
-  color: white;
-}
-
-/* UPLOAD */
+/* UPLOAD AREA */
 .upload-area {
   border: 2px dashed var(--border);
   padding: 40px;
   text-align: center;
   cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s ease;
 }
 
 .upload-area:hover {
   border-color: var(--blue);
+  background: var(--surface-hover);
 }
 
 /* BUTTON */
-.btn {
+.upload-area button {
+  margin-top: 10px;
   padding: 10px 20px;
   border: none;
-  cursor: pointer;
-}
-
-.btn-primary {
   background: var(--blue);
   color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-area button:hover {
+  opacity: 0.9;
 }
 
 /* PREVIEW */
@@ -108,59 +92,22 @@ body {
   margin-top: 20px;
 }
 
+.preview-section h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* PROGRESS BAR */
 .progress-bar {
   height: 8px;
   background: #333;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
   background: var(--blue);
-}
-
-.result-box {
-  background: #111;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-/* VOICE */
-.voice-recorder {
-  text-align: center;
-}
-
-.mic-btn {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: none;
-  background: var(--blue);
-  font-size: 2rem;
-  color: white;
-}
-
-.mic-btn.recording {
-  background: var(--error);
-}
-
-/* FORM */
-.data-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input,
-select,
-textarea {
-  padding: 10px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: white;
-}
-
-/* EMPTY */
-.empty-state {
-  text-align: center;
-  color: var(--text-secondary);
+  transition: width 0.2s ease;
 }

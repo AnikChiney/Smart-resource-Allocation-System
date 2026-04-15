@@ -7,11 +7,13 @@ import Volunteers from './pages/volunteers';
 import PriorityDashboard from './pages/PriorityDashboard';
 import Matching from './pages/Matching';
 import DataCollection from './pages/DataCollection';
+import Header from './pages/header';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Routes>
           <Route path="/" element={<DataCollection />} />
           <Route path="/dashboard" element={<Dashboard />} />

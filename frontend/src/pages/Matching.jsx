@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Matching.css";
-import Header from "./header";
 
 const Matching = () => {
   const [allIssues, setAllIssues] = useState([]);
@@ -94,7 +93,6 @@ const Matching = () => {
 
   return (
     <div className="matching-container">
-      <Header active="matching" />  
       {/* Header */}
       <div className="matching-header">
         <div>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./review.css";
-import Header from "./header";
 
 const API_BASE =
   window.location.hostname === "localhost" ||
@@ -62,8 +61,6 @@ export default function Review() {
 
   return (
     <div className="review-container">
-      <Header active="review" />
-
       <header className="page-header">
         <h1>Data Review & Cleaning</h1>
         <p>Review, validate and clean collected data before prioritization.</p>

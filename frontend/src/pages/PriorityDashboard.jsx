@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./priority.css";
-import Header from "./header";
 
 const API_BASE =
   window.location.hostname === "localhost" ||
@@ -65,7 +64,6 @@ export default function PriorityDashboard() {
 
   return (
     <div className="priority-container">
-      <Header active="priority" />
       {/* HEADER */}
       <div className="priority-header">
         <div>

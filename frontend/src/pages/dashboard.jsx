@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./dashboard.css";
 import { Line, Doughnut, Bar } from "react-chartjs-2";
 import "chart.js/auto";
-import Header from "./header";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({
@@ -64,8 +63,6 @@ const Dashboard = () => {
 
   return (
     <div>
-      <Header active="dashboard" />
-
       <div className="dashboard-container">
         <div className="dashboard-header">
           <h1>Command Dashboard</h1>

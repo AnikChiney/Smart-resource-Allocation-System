@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./volunteers.css";
-import Header from "./header";
 
 const API = "http://localhost:5000";
 
@@ -76,8 +75,6 @@ export default function Volunteers() {
 
   return (
     <div>
-      <Header active="volunteers" />
-
       <div className="volunteer-container">
         {/* HEADER */}
         <div className="volunteer-header">
