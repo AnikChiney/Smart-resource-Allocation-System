@@ -1,5 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./DataCollection.css";
+
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 const DataCollection = () => {
   const [activeTab, setActiveTab] = useState("upload"); 
@@ -13,7 +15,9 @@ const DataCollection = () => {
     const updateStatus = () => setIsOnline(navigator.onLine); 
     window.addEventListener("online", updateStatus); 
     window.addEventListener("offline", updateStatus); 
-    return () => { window.removeEventListener("online", updateStatus); 
+
+    return () => { 
+      window.removeEventListener("online", updateStatus); 
       window.removeEventListener("offline", updateStatus); 
     }; 
   }, []);
@@ -29,10 +33,12 @@ const DataCollection = () => {
     formData.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:8001/upload/", {
+      const res = await fetch(`${API_BASE}/upload/`, {
         method: "POST",
         body: formData,
       });
+
+      if (!res.ok) throw new Error("Upload failed");
 
       const data = await res.json();
       console.log("Uploaded:", data);
@@ -55,11 +61,14 @@ const DataCollection = () => {
       {!isOnline && (
         <div className="offline-indicator"> 
           📴 Offline Mode — Changes saved locally 
-        </div>)
-      }
+        </div>
+      )}
+
       <div className="container">
-        <header> <h1>Smart Resource Allocation System</h1>
-          <p>Data Collection Module — Step 1</p> </header>
+        <header>
+          <h1>Smart Resource Allocation System</h1>
+          <p>Data Collection Module — Step 1</p>
+        </header>
 
         <h1>File Upload</h1>
 
@@ -92,7 +101,6 @@ const DataCollection = () => {
         )}
       </div>
     </div>
-
   );
 };
 
